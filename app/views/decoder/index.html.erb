@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Decoder</title>
+</head>
+<body>
+<div class='container'>
+	<%= form_for @text, :url => encode_path(:format => "json") do |f| %>
+		<div class="row">
+			<!-- Legend -->
+		</div>
+		<div class='row'>
+			<div class='col-md-5'>
+				<p>
+					<%= f.text_area :content, :placeholder => "Enter your text", autofocus: true, class:"form-control input-lg" %>
+				</p>
+				<!-- Input form for user text-->
+			</div>
+			<div class='col-md-2'>
+				<p>
+					<%= f.text_area :shift, :placeholder => "Shift", autofocus: true, class:"form-control input-lg" %>
+				</p>
+				<p>
+					<%= submit_tag "Get JSON", onClick: "$(this).closest('form').attr('action', '#{ encode_path(format: :json) }')"%>
+				</p>
+				<!-- Button and shift input form -->
+			</div>
+			<div class='col-md-5'>
+				<!-- Output form for encoded/decoded text -->
+			</div>
+		</div>
+		<div class="row">
+			<!-- Put diagrams here  -->
+		</div>
+		<div class="row">
+			<!-- Put notification here -->
+		</div>
+	<% end %>	
+</div>
+</body>
+</html>
