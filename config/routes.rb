@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  root 'decoder#index'
+  root 'decoder#index', as: 'index'
   post 'decoder/encode', as: 'encode'
+  post 'decoder/isEncoded', as: 'isEncoded'
   patch 'decoder/encode'
+  get 'decoder/encode'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

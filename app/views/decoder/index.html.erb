@@ -5,28 +5,29 @@
 </head>
 <body>
 <div class='container'>
-	<%= form_for @text, :url => encode_path(:format => "json") do |f| %>
+<form id="">
 		<div class="row">
 			<!-- Legend -->
 		</div>
 		<div class='row'>
 			<div class='col-md-5'>
 				<p>
-					<%= f.text_area :content, :placeholder => "Enter your text", autofocus: true, class:"form-control input-lg" %>
+					<textarea placeholder="Enter your text" autofocus="autofocus" class="form-control input-lg" name="input_text" id="input_text"></textarea>
 				</p>
 				<!-- Input form for user text-->
 			</div>
 			<div class='col-md-2'>
-				<p>
-					<%= f.text_area :shift, :placeholder => "Shift", autofocus: true, class:"form-control input-lg" %>
-				</p>
-				<p>
-					<%= submit_tag "Get JSON", onClick: "$(this).closest('form').attr('action', '#{ encode_path(format: :json) }')"%>
-				</p>
 				<!-- Button and shift input form -->
+				<textarea placeholder="shift" autofocus="autofocus" class="form-control input-md shift" name="shift" id="shift"></textarea>				
+				<p>
+					<input type="button" name="commit" value="Submit" class="submit btn btn-lg btn-primary btn-block">
+				</p>
 			</div>
 			<div class='col-md-5'>
 				<!-- Output form for encoded/decoded text -->
+				<p>
+				<textarea placeholder="Here will apear decoded text" autofocus="autofocus" class="form-control input-lg" name="output_text" id="output_text"></textarea>
+				</p>
 			</div>
 		</div>
 		<div class="row">
@@ -34,8 +35,9 @@
 		</div>
 		<div class="row">
 			<!-- Put notification here -->
+			<p id='notice'></p>
 		</div>
-	<% end %>	
+	</form>
 </div>
 </body>
 </html>

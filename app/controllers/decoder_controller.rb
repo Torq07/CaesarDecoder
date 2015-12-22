@@ -5,7 +5,7 @@ class DecoderController < ApplicationController
 
 	def encode
 		@text||=Text.new(:content=>"")
-		@text.update_attributes(:content => params[:text][:content], :shift => params[:text][:shift])
+		@text.update_attributes(:content => params[:content], :shift => params[:shift])
 		position=[]
 		@newstr=""
 		alphabet = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_+=-`\/}{?'}{:;|\/><"
@@ -14,15 +14,19 @@ class DecoderController < ApplicationController
 	 		@newstr+=alphabet.split(//).at(n.to_i)
 	 	end
 	 	puts "New str #{@newstr}"
-		respond_to do |format|
-		  format.json { render :json => @text }
-		end
+	 	respond_to do |format|
+	 		format.js
+	 	end
 	end
 
-private
-
-	def encoded?()
-		
+	def isEncoded
+		if params[:content].length>3
+			respond_to do |format|
+		 			format.js
+		 	end
+ 		else
+			render :index
+		end		
 	end
 
 end
