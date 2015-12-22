@@ -12,7 +12,7 @@
   chars_data=[]    
   f=(String.fromCharCode(x+64) for x in [1..26])
 		f.map (i)->
-			chars_data.push ($("#input_text").val().match(new RegExp(i.toLowerCase(), "g")) || []).length
+			chars_data.push ($("#input_text").val().toLowerCase().match(new RegExp(i.toLowerCase(), "g")) || []).length/$("#input_text").val().length*100
   data = {
     labels : (String.fromCharCode(x+64) for x in [1..26]),
     datasets : [
