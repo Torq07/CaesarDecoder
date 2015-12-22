@@ -20,12 +20,14 @@ class DecoderController < ApplicationController
 	end
 
 	def isEncoded
+		@chars_percentage=[]
+		params[:content].chars.group_by(&:chr).map { |k, v| @chars_percentage<<[k, v.size] }
 		if params[:content].length>3
 			respond_to do |format|
 		 			format.js
 		 	end
  		else
-			render :index
+			redirect_to :index
 		end		
 	end
 
