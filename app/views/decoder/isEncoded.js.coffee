@@ -1,1 +1,1 @@
-$("#notice").empty().append("Great");
+$(".alert-warning").show().empty().append("Great");
