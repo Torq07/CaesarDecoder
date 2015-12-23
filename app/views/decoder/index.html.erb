@@ -14,25 +14,29 @@
 		<div class='row'>
 			<div class='col-md-5'>
 				<p>
-					<textarea placeholder="Enter your text" autofocus="autofocus" class="form-control input-lg" rows="5" id="input_text"></textarea>
+					<textarea placeholder="Enter your text" autofocus="autofocus" class="form-control input-lg" rows="5" id="input_text" style="resize: none;"></textarea>
 				</p>
 				<!-- Input form for user text-->
 			</div>
-			<div class='col-md-2'>
+			<div class='col-md-2' style="margin-top: 15px">
 				<form class="form-inline">
 				  <div class="form-group">
-						<textarea placeholder="shift" autofocus="autofocus" class="form-control input-md shift" id="shift"></textarea>				
+					  <div class="input-group">
+				      <div class="input-group-addon">ROT</div>
+				      <input type="text" class="form-control" id="shift" placeholder="Number">
+				    </div>			
 				  </div>
-				  <div class="form-group">
-						<input type="button" name="commit" value="Submit" class="submit btn btn-lg btn-primary btn-block">
-				  </div>
+			   	<div class="btn-group" role="group" style="margin:8px">
+						<input type="button" name="commit" value="Encode" class="submitEncode btn btn-md btn-primary">
+						<input type="button" name="commit" value="Decode" class="submitDecode btn btn-md btn-primary">
+					</div>	
 				</form>
 				<!-- Button and shift input form -->
 			</div>
 			<div class='col-md-5'>
 				<!-- Output form for encoded/decoded text -->
 				<p>
-				<textarea placeholder="Here will apear decoded text" autofocus="autofocus" class="form-control input-lg" rows="5" id="output_text"></textarea>
+				<textarea placeholder="Here will apear decoded text" autofocus="autofocus" class="form-control input-lg" rows="5" id="output_text" style="resize: none;" readonly></textarea>
 				</p>
 			</div>
 		</div>
