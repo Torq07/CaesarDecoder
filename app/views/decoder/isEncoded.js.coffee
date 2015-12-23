@@ -1,1 +1,1 @@
-$(".alert-warning").show().empty().append("Great");  
+$(".alert-warning").show().empty().append("<p> Looks like your content is encoded with Caesar cipher. Key to dencode is <b><%= @shift %> </b>");  
