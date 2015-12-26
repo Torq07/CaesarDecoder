@@ -15,7 +15,7 @@ For this task was used:
 
 Task is  made without Unit and functionl tests.
 
-Fully worked version you can find on [Heroku](https://cesar-testing.herokuapp.com/)
+Fully worked version you can find on [Heroku](https://cesar-testing.herokuapp.com)
 
 (*) For correct shift detection text must contain more than 400 symbols
 
