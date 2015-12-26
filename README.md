@@ -4,7 +4,7 @@ This is test task for intern Ruby developer position in Light IT company.
 Basically this is Caeser Decoder which can
 
 * Encode text using english alphabet
-* Dencode encoded messages
+* Decode encoded messages
 * Detect shift for encoded text(*)
 
 For this task was used:
