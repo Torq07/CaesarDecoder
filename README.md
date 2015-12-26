@@ -13,11 +13,11 @@ For this task was used:
 * Ruby-on-Rails framework for server part
 * Bootstrap + JS for client
 
-Task is  made without Unit and functionl tests.
+Task is  made without Unit and functional tests.
 
-Fully worked version you can find on [Heroku](https://cesar-testing.herokuapp.com)
+Fully working version you can find on [Heroku](https://cesar-testing.herokuapp.com)
 
-(*) For correct shift detection text must contain more than 400 symbols
+(*) For correct shift detection, text must contain more than 400 symbols
 
 * Ruby version: 2.2.1
 * Rails version: 4.2.5
